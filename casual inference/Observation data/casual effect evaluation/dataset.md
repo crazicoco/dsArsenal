@@ -20,6 +20,11 @@
 
     **应用**：验证因果效应估计方法（如华泰金工团队用其分析股票概念的因果效应）
 
+    **数据地址**:https://users.nber.org/~rdehejia/data/,  目录下的nswre74_control.txt 、nswre74_treated.txt
+
+    **参考链接**：https://blog.csdn.net/qq_32146369/article/details/140807593
+
+
 3. MineThatData E-Mail营销数据集
 
     **领域**：商业分析
