@@ -45,8 +45,15 @@ PSM方法包括以下步骤：
     - 通过增加可能存在的混淆变量，判断前后的结论是否一致，如果不一致或者多次变化，则不够稳健
 
 ## Code 
+在[PSM实战.ipynb](https://github.com/crazicoco/dsArsenal/blob/main/casual%20inference/Observation%20data/casual%20effect%20evaluation/PSM/PSM%E5%AE%9E%E6%88%98.ipynb)中，我采用两种方法实现PSM对lalonde的效果评估，我会发现前后差异会有很大的变化，具体变化如下：
+
+- 基于PSMpy包体实现psm评估，我会发现是否放回抽样得到的结果差异很大，甚至正负相反，推测该包在使用中存在问题，而且对比另一种方法匹配分 对比面积图差异很大；
+- 采用完全自主实现PSM逻辑方法，具体包括训练logistic模型，knn匹配，检验匹配，计算ATT等步骤，效果更好，与IPW等方法效果接近，并且覆盖度，匹配的效果更好。
 
 
+## 思考
+在实现后复盘，会有以下注意点：
+1. 通常使用PSM过程中，比较少关注KNN实现，但是如果效果不好也可以尝试调整KNN，包括 是否有放回 / 替换 欧氏距离方法 / 替换 倾向得分为logit距离，缓解极端值匹配问题 / 删除极端值，不做匹配
 
 
 
