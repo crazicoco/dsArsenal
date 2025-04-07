@@ -1,3 +1,7 @@
+## casual effect function
+
+![alt text](image-1.png)
+
 ## casual effect evaluation
 为了更加系统的分析各种因果推断方法的效果评估能力差异，我们选择在相同的数据进行因果效应评估，横向对比，具体效果如下：
 
@@ -8,6 +12,10 @@
 | 实验组-控制组      | 1794       |
 | IPW调整   | 1542        |
 | PSM:logistic-KNN   | 1816        |
+
+
+
+
 
 
 
